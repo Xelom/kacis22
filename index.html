@@ -8,9 +8,10 @@
     <meta name="author" content="">
     <link rel="icon" href="ico/favicon.ico">
 
-    <title>Kaçış 22 : Bu Otelden Kaçabilir misin?</title>
+    <title>KAÇIŞ 22</title>
 
     <!-- CSS Plugins -->
+    <link href="css/plugins/jquery.fullPage.css" rel="stylesheet">
     <link href="css/plugins/animate.css" rel="stylesheet">
     <link href="css/plugins/lightbox.css" rel="stylesheet">
     <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -30,7 +31,7 @@
     <![endif]-->
   </head>
 
-  <body class="classic" data-spy="scroll" data-target=".scrollspy_menu">
+  <body class="sliding-image">
 
     <!-- PRELOADER
     ============================== -->
@@ -39,9 +40,19 @@
     </div>
 
 
+    <!-- BACKGROUND PATTERN
+    ============================== -->
+    <div class="bg-pattern"></div>
+
+
+    <!-- BACKSTRETCH CAROUSEL
+    ============================== -->
+    <div class="backstretch-carousel"></div>
+
+
     <!-- NAVBAR
     ============================== -->
-    <div class="navbar navbar-default navbar__initial navbar-fixed-top scrollspy_menu" role="navigation">
+    <div class="navbar navbar-default navbar__initial navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -54,10 +65,10 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="fullpage__nav nav navbar-nav navbar-right">
-            <li><a href="#welcome">Ana Sayfa</a></li>
-            <li><a href="#about">Oyun Hakkında</a></li>
-            <li><a href="#features">Kurallar</a></li>
-            <li><a href="#contact">İletişim</a></li>
+            <li data-menuanchor="welcome"><a href="#welcome">Merhaba</a></li>
+            <li data-menuanchor="team"><a href="#team">Oyun Hakkında</a></li>
+            <li data-menuanchor="about"><a href="#about">Bilmeniz Gerekenler</a></li>
+            <li data-menuanchor="contact"><a href="#contact">İletişim</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -75,7 +86,7 @@
     </div>
 
     <!-- Sidebar menu -->
-    <div class="sidebar__menu sidebar__menu_hidden scrollspy_menu">
+    <div class="sidebar__menu sidebar__menu_hidden">
 
       <!-- Sidebar button close -->
       <div class="sidebar__btn sidebar__btn_close">
@@ -85,413 +96,399 @@
       </div>
 
       <!-- Sidebar brand name -->
-      <div class="sidebar-menu__brand">Kaçış-22</div>
+      <div class="sidebar-menu__brand">KAÇIŞ 22</div>
 
       <!-- Sidebar links -->
-      <ul class="fullpage__nav sidebar-menu__ul nav">
-        <li><a href="#welcome">Ana Sayfa</a></li>
-        <li><a href="#about">Oyun Hakkında</a></li>
-        <li><a href="#features">Kurallar</a></li>
-        <li><a href="#contact">İletişim</a></li>
+      <ul class="fullpage__nav sidebar-menu__ul">
+        <li data-menuanchor="welcome"><a href="#welcome">Welcome</a></li>
+        <li data-menuanchor="team"><a href="#team">Oyun Hakkında</a></li>
+        <li data-menuanchor="about"><a href="#about">Bilmeniz Gerekenler</a></li>
+        <li data-menuanchor="contact"><a href="#contact">İletişim</a></li>
       </ul>
 
     </div> <!-- / .sidebar-menu__ul -->
 
 
-    <!-- WELCOME
+    <!-- FULLPAGE.JS CONTAINER
     ============================== -->
-    <div class="welcome_classic" id="welcome">
-      <div class="welcome-classic__inner">
+    <div id="fullpage">
+
+      <!-- WELCOME SCREEN
+      ============================== -->
+      <div class="site-wrapper">
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
 
               <!-- Pre heading -->
-              <p class="heading__pre">
-                Maceracı
-              </p>
+              <!-- <p class="heading__pre">
+                Version 2.2.0
+              </p> -->
 
               <!-- Heading -->
-              <h1 class="heading heading_lg">
-                <span class="text-primary">Kaçış 22'ye</span> Hoşgeldin
-              </h1>
+              <!-- <h1 class="heading heading_lg">
+                Welcome to <span class="text-primary">Wolfram</span>
+              </h1> -->
 
               <!-- Sub heading -->
-              <p class="heading__sub">
-                Bu otelin sırlarını çözüp çıkış yolunu bulabilecek misin?
-              </p>
+              <!-- <p class="heading__sub">
+                Creative one-page template ideal for personal websites and small projects.
+              </p> -->
 
               <!-- Button -->
-              <div class="text-center">
+              <!-- <div class="text-center">
 
                 <a href="#about" class="btn btn-xl btn-primary">
                   <span class="oi oi-arrow-right" title="Find out more" aria-hidden="true"></span>
-                  <span>Hadi Başla</span>
+                  <span>Find Out More</span>
                 </a>
 
-              </div>
+              </div> -->
 
             </div>
           </div> <!-- / .row -->
         </div> <!-- / .container -->
-      </div> <!-- / .classic-welcome__inner -->
-    </div> <!-- / .welcome_classic -->
+      </div> <!-- / .site-wrapper -->
 
+      <!-- TEAM SCREEN
+      ============================== -->
+      <div class="site-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
 
-    <!-- ABOUT
-    ============================== -->
-    <div class="site-wrapper" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-            <div class="lead text-center text">
-              <em>
-                8 Ocak 1943 - The New Yorker Hotel 3327 nolu oda. Nikola Tesla şüpheli bir şekilde hayata gözlerini yumdu. Gizli servis üzerinde çalıştığı son icadının evraklarına el koymak için yola çıktı bile. Onlar varmadan ekibinle birlikte araştırmanı yapmak için yalnızca 1 saatin var!
-              </em>
+              <!-- Heading -->
+              <h1 class="heading">
+                OYUN <span class="text-primary">HAKKINDA</span>
+              </h1>
+
+              <!-- Sub heading -->
+              <h2>
+                Otele girdin ve kapı kapandı. Bu sandığın gibi bir otel değil, kaçış oyunu başladı. Bu esrarengiz otelin sırlarını çözmek ve kaçmak için 1 saatin var. Haydi, bu maceraya sen de katıl!
+              </h2>
+
             </div>
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </div> <!-- / .site-wrapper_classic -->
+          </div> <!-- / .row -->
+          <div class="row">
+            <div class="col-sm-4">
 
-    <div class="site-wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
+              <!-- Team member -->
+              <div class="team__member">
 
-            <!-- Heading -->
-            <h1 class="heading">
-              Oyunun <span class="text-primary">amacı</span> ve <span class="text-primary">hikayesi</span>
-            </h1>
+                <!-- Info -->
+                <p class="team-member__info">
+                  <p style="font-size:24px;">
+                    Arkadaşlarınla ve ailenle birlikte yaşayacağın<span class="text-primary"> eşsiz</span> bir deneyim
+                  </p>
+                </p>
 
-            <!-- Sub heading
-            <p class="heading__sub">
-              Advanced customizability and attention to details will help you get your own website up and running in no time.
-            </p>-->
+              </div> <!-- / .team__member -->
 
-          </div>
-          <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
 
-            <!-- About item #1 -->
-            <div class="about__item">
-              <h3 class="about-item__title">
-                <span class="about-item-title__icon oi oi-tablet" title="Fully responsive" aria-hidden="true"></span> The New Yorker Hotel - 1943
-              </h3>
-              <p class="about-item__content">
-                Yaşadığımız yüzyılı kendi elleriyle şekillendiren ünlü mucit...
+              <!-- Team member -->
+              <div class="team__member">
+                <!-- Info -->
+                <p class="team-member__info">
+                  <p style="font-size:24px;">
+                    Sırlar dolu bir <span class="text-primary">otel</span> , kaçmanı sağlayacak <span class="text-primary">ipuçları</span>
+                  </p>
+                </p>
+              </div> <!-- / .team__member -->
+
+            </div>
+            <div class="col-sm-4">
+
+              <!-- Team member -->
+              <div class="team__member">
+                <!-- Info -->
+                <p class="team-member__info">
+                  <p style="font-size:24px;">
+                    1 saatlik <span class="text-primary">benzersiz</span> deneyim
+                  </p>
+                </p>
+              </div> <!-- / .team__member -->
+
+            </div>
+          </div> <!-- / .row -->
+        </div> <!-- / .container -->
+      </div> <!-- / .site-wrapper -->
+
+
+      <!-- ABOUT SCREEN
+      ============================== -->
+      <div class="site-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+
+              <!-- Heading -->
+              <h1 class="heading">
+                <span class="text-primary">bilmeniz</span> gerekenler
+              </h1>
+
+
+            </div>
+            <div class="col-sm-4">
+
+              <!-- About item #1 -->
+              <div class="about__item">
+                <h3 class="about-item__title">
+                  <span class="about-item-title__icon fa fa-clock-o" aria-hidden="true"></span> Süre
+                </h3>
+                <p class="about-item__content">
+                Oyunumuz 1 saattir.
+                </p>
+              </div> <!-- / .about__item -->
+
+            </div>
+            <div class="col-sm-4">
+
+              <!-- About item #2 -->
+              <div class="about__item">
+                <h3 class="about-item__title">
+                  <span class="about-item-title__icon fa fa-history" aria-hidden="true"></span> Oyun Öncesinde
+                </h3>
+                <p class="about-item__content">
+                  Oyuna yalnızca bir ekip dahil olabileceğinden gelmeden önce rezervasyon yaptırmanız gerekmektedir. Oyun saatinden 5 dk önce tüm ekip olarak kapıda bulunmanız yeterlidir.
+                </p>
+              </div> <!-- / .about__item -->
+
+            </div>
+            <div class="col-sm-4">
+
+              <!-- About item #3 -->
+              <div class="about__item">
+                <h3 class="about-item__title">
+                  <span class="about-item-title__icon fa fa-video-camera" aria-hidden="true"></span> Oyun Sırasında
+                </h3>
+                <p class="about-item__content">
+                  Oyunumuz güç kullanımı gerektirmeyecek ipuçlarından oluşmaktadır. Oyun süresince biz sizi izliyor ve dinliyor olacağız. İstediğiniz zaman ipucu istemek ya da oyundan çıkmak için yönetici ile irtibat kurabilirsiniz.
+                </p>
+              </div> <!-- / .about__item -->
+
+            </div>
+          </div> <!-- / .row -->
+          <div class="row">
+            <div class="col-sm-4">
+
+              <!-- About item #1 -->
+              <div class="about__item">
+                <h3 class="about-item__title">
+                  <span class="about-item-title__icon fa fa-child" aria-hidden="true"></span> Kişisel İhtiyaçlar
+                </h3>
+                <p class="about-item__content">
+                Oyun esnasında malesef yemek, içmek ve tuvalet ihtiyacınızı karşılamanız mümkün olmayacaktır. Önerimiz ihtiyaçlarınızı oyundan önce karşılamanızdır.
+                </p>
+              </div> <!-- / .about__item -->
+
+            </div>
+            <div class="col-sm-4">
+
+              <!-- About item #2 -->
+              <div class="about__item">
+                <h3 class="about-item__title">
+                  <span class="about-item-title__icon fa fa-users" aria-hidden="true"></span> Ekip ve Yaş
+                </h3>
+                <p class="about-item__content">
+                  En az 2 - En fazla 6 kişi. Oyun için yaş sınırımız minimum 15’tir. Bu yaştan küçük oyuncularımız aileleri ile birlikte katılabilir.
+                </p>
+              </div> <!-- / .about__item -->
+
+            </div>
+            <div class="col-sm-4">
+
+              <!-- About item #3 -->
+              <div class="about__item">
+                <h3 class="about-item__title">
+                  <span class="about-item-title__icon fa fa-try" aria-hidden="true"></span> Ödeme
+                </h3>
+                <p class="about-item__content">
+                  Şuan sadece nakit ödeme kabul etmekteyiz. İleride kredi kartı seçeneği de olacaktır.
+                </p>
+              </div> <!-- / .about__item -->
+
+            </div>
+          </div> <!-- / .row -->
+          <div class="row">
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+
+              <!-- About item #2 -->
+              <div class="about__item">
+                <h3 class="about-item__title">
+                  <span class="about-item-title__icon fa fa-exclamation-triangle" aria-hidden="true"></span> Gizlilik
+                </h3>
+                <p class="about-item__content">
+                  Oyun sırasında telefon, kamera gibi kayıt cihazlarıyla görüntü almak yasaktır. Oyun sonrasında fotoğraf köşemizde bol bol fotoğraf çekme imkanınız olacaktır.
+                </p>
+              </div> <!-- / .about__item -->
+
+            </div>
+            <div class="col-sm-4">
+            </div>
+          </div> <!-- / .row -->
+        </div> <!-- / .container -->
+      </div> <!-- / .site-wrapper -->
+
+      <!-- CONTACT SCREEN
+      ============================== -->
+      <div class="site-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+
+              <!-- Heading -->
+              <h1 class="heading">
+                Bizimle <span class="text-primary">iletişime</span> geçin
+              </h1>
+
+              <!-- Sub heading -->
+              <p class="heading__sub">
+                Aklınızdaki tüm sorular için bize ulaşabilirsiniz
               </p>
-            </div> <!-- / .about__item -->
 
-          </div>
-          <div class="col-sm-4">
+            </div>
+          </div> <!-- / .row -->
+          <div class="row">
+            <div class="col-sm-6 col-md-5 col-md-offset-1">
 
-            <!-- About item #2 -->
-            <div class="about__item">
-              <h3 class="about-item__title">
-                <span class="about-item-title__icon oi oi-project" title="Built with LESS" aria-hidden="true"></span> "Yıldırımların Efendisi" Nikola Tesla
+              <!-- Contact info -->
+              <h3 class="contact-info__title">
+                info<span class="text-primary">@kacis22.com</span>
               </h3>
-              <p class="about-item__content">
-                yaşamının son on yılını geçirdiği ve son nefesini verdiği bu gizemli otelde heyecan dolu bir maceraya hazır mısınız?
+              <h3 class="contact-info__title">
+                (987)654-32-10
+              </h3>
+              <p>
+                Adres: 1. Murat Mah. Zübeyde Hanım Cd. No:14 Kandır Apt.
+                <br />
+                D:4 Merkez Edirne
               </p>
-            </div> <!-- / .about__item -->
 
-          </div>
-          <div class="col-sm-4">
+              <!-- Social links -->
+              <div class="contact-info__social">
+                <a href="#" class="contact-info-social__item facebook">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="contact-info-social__item twitter">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#" class="contact-info-social__item google-plus">
+                  <i class="fa fa-google-plus"></i>
+                </a>
+              </div>
 
-            <!-- About item #3 -->
-            <div class="about__item">
-              <h3 class="about-item__title">
-                <span class="about-item-title__icon oi oi-envelope-closed" title="Functional contact form" aria-hidden="true"></span> Tesla'nın inanılmaz hayal gücü
-              </h3>
-              <p class="about-item__content">
-                İç dünyasında bir yolculuğa çıkıyor ve ölümünün ardındaki sis perdesini aralamaya çalışıyoruz. İhtiyacınız olan şeyler sadece ekip ruhu, biraz dikkat ve enerji...
-              </p>
-            </div> <!-- / .about__item -->
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5">
 
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </div> <!-- / .site-wrapper_classic -->
+              <!-- Alert message -->
+              <div class="alert contact-form__alert" id="form_message" role="alert"></div>
 
-    <!-- FEATURES
-    ============================== -->
-    <div class="site-wrapper" id="features">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
+              <!-- Setting the custom theme for reCaptcha.
+                   Default themes and customization:
+                   https://developers.google.com/recaptcha/docs/customization -->
 
-            <!-- Heading -->
-            <h1 class="heading">
-              Ve <span class="text-primary">Kurallar</span>
-            </h1>
+              <script type="text/javascript">
+               var RecaptchaOptions = {
+                  theme : 'custom',
+                  custom_theme_widget: 'recaptcha_widget'
+               };
+              </script>
 
-            <!-- Sub heading -->
-            <p class="heading__sub">
-              Kaçış 22'nin onayı dışında oyun içeriği ve akışına ilişkin bilgi paylaşımı yasaktır. Böyle bir durumdan doğacak zararlar adına hukuki yollara başvurma hakkı saklıdır.
-            </p>
-
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-sm-6 col-md-5 col-md-offset-1">
-
-            <!-- Features item -->
-            <div class="features__item">
-
-                <!-- Title -->
-              <h3 class="features-item__title">
-                <span class="text-primary">01.</span>
-                Güç kullanmayı gerektiren bir aktivite içermez. Sadece biraz dikkat yeterlidir.
-              </h3>
-            </div> <!-- / .features__item -->
-
-          </div>
-          <div class="col-sm-6 col-md-5">
-
-            <!-- Features item -->
-            <div class="features__item">
-
-                <!-- Title -->
-              <h3 class="features-item__title">
-                <span class="text-primary">02.</span>
-                Oyun saatinden 5 dakika önce ekip olarak hazır olmanız gerekir. Sürenizi verimli kullanmanız adına bu önemlidir.
-              </h3>
-            </div> <!-- / .features__item -->
-
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-sm-6 col-md-5 col-md-offset-1">
-
-            <!-- Features item -->
-            <div class="features__item">
-
-                <!-- Title -->
-              <h3 class="features-item__title">
-                <span class="text-primary">03.</span>
-                Odaya girip kapıyı kapattığınız andan itibaren macera başlamış olur.
-              </h3>
-            </div> <!-- / .features__item -->
-
-          </div>
-          <div class="col-sm-6 col-md-5">
-
-            <!-- Features item -->
-            <div class="features__item">
-
-                <!-- Title -->
-              <h3 class="features-item__title">
-                <span class="text-primary">04.</span>
-                Oyuna ekibinizin tümü birlikte başlar.
-              </h3>
-            </div> <!-- / .features__item -->
-
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-sm-6 col-md-5 col-md-offset-1">
-
-            <!-- Features item -->
-            <div class="features__item">
-
-                <!-- Title -->
-              <h3 class="features-item__title">
-                <span class="text-primary">05.</span>
-                Acil ya da sıradışı durumlarda oyun alanından dilediğiniz an çıkabilir, oyunu sonlandırabilirsiniz.
-              </h3>
-            </div> <!-- / .features__item -->
-
-          </div>
-          <div class="col-sm-6 col-md-5">
-
-            <!-- Features item -->
-            <div class="features__item">
-
-                <!-- Title -->
-              <h3 class="features-item__title">
-                <span class="text-primary">06.</span>
-                Seans süresi 60 dakikadır.
-              </h3>
-            </div> <!-- / .features__item -->
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </div> <!-- / .site-wrapper -->
-
-
-    <!-- CONTACT
-    ============================== -->
-    <div class="site-wrapper" id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-
-            <!-- Heading -->
-            <h1 class="heading">
-              Her türlü soru ve önerileriniz için bizimle <span class="text-primary">iletişime</span> geçin.
-            </h1>
-
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-sm-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
-
-            <!-- Alert message -->
-            <div class="alert contact-form__alert" id="form_message" role="alert"></div>
-
-            <!-- Setting the custom theme for reCaptcha.
-                 Default themes and customization:
-                 https://developers.google.com/recaptcha/docs/customization -->
-
-            <script type="text/javascript">
-             var RecaptchaOptions = {
-                theme : 'custom',
-                custom_theme_widget: 'recaptcha_widget'
-             };
-            </script>
-
-            <!-- Contact form -->
-            <!-- Please carefully read the README.txt file
-             in order to setup the PHP contact form properly -->
-            <form role="form" class="contact__form" id="form_sendemail">
-              <div class="row">
-                <div class="col-sm-6">
-                  <!-- Email -->
-                  <div class="form-group">
-                    <label for="email" class="sr-only">Email Adresin</label>
+              <!-- Contact form -->
+              <!-- Please carefully read the README.txt file
+               in order to setup the PHP contact form properly -->
+              <form role="form" class="contact__form" id="form_sendemail">
+                <div class="row form-group">
+                  <div class="col-xs-6">
+                    <label for="email" class="sr-only">Your email address</label>
                     <input type="email" name="email" class="form-control" id="email" placeholder="E-mail">
                     <span class="help-block"></span>
                   </div>
-                  <!-- Name -->
-                  <div class="form-group">
-                    <label for="name" class="sr-only">Adın Soyadın</label>
+                  <div class="col-xs-6">
+                    <label for="name" class="sr-only">Your name</label>
                     <input type="text" name="name" class="form-control" id="name" placeholder="Full Name">
                     <span class="help-block"></span>
                   </div>
+                </div>
+                <div class="form-group">
+                  <label for="message" class="sr-only">Your message</label>
+                  <textarea name="message" class="form-control" rows="3" id="message" placeholder="Message"></textarea>
+                  <span class="help-block"></span>
+                </div>
 
-                  <!-- reCAPTCHA -->
-                  <div class="form-group" id="form-captcha">
-                    <!-- Start reCAPTCHA -->
-                    <div id="recaptcha_widget" style="display:none">
-                      <div class="recaptcha__merge">
-                        <div class="recaptcha-merge__action">
-                          <a href="javascript:Recaptcha.reload()">
-                            <span class="oi oi-loop-square"></span>
-                          </a>
-                          <a class="recaptcha_only_if_image" href="javascript:Recaptcha.switch_type('audio')">
-                            <span class="oi oi-headphones"></span>
-                          </a>
-                          <a class="recaptcha_only_if_audio" href="javascript:Recaptcha.switch_type('image')">
-                            <span class="oi oi-image"></span>
-                          </a>
-                        </div> <!-- / .recaptcha-merge__action -->
+                <!-- reCAPTCHA -->
+                <div class="form-group" id="form-captcha">
+                  <!-- Start reCAPTCHA -->
+                  <div id="recaptcha_widget" style="display:none">
+                    <div class="row">
+                      <div class="col-xs-12 col-md-10">
+                        <p>
+                          <span class="recaptcha_only_if_image">Can't read the words below?</span><span class="recaptcha_only_if_audio">Can't hear the sound?</span> <a href="javascript:Recaptcha.reload()">Get another CAPTCHA</a> or <span class="recaptcha_only_if_image"><a href="javascript:Recaptcha.switch_type('audio')">try an audio CAPTCHA</a></span><span class="recaptcha_only_if_audio"><a href="javascript:Recaptcha.switch_type('image')">try an image CAPTCHA</a></span>. Powered by reCAPTCHA.
+                        </p>
                         <!-- reCAPTCHA image -->
                         <div id="recaptcha_image"></div>
-                      </div> <!-- / .recaptcha__merge -->
-                      <div class="recaptcha_only_if_image text-muted">
-                        Yukarıdaki kelimeleri girin (powered by reCaptcha):
+                        <div class="recaptcha_only_if_image">
+                          Enter the words above:
+                        </div>
+                        <div class="recaptcha_only_if_audio">
+                          Enter the numbers you hear:
+                        </div>
+                        <!-- reCAPTCHA input -->
+                        <input class="form-control input-sm" type="text" id="recaptcha_response_field" name="recaptcha_response_field" />
                       </div>
-                      <div class="recaptcha_only_if_audio text-muted">
-                        Duyduğunuz sayıları girin (powered by reCaptcha):
-                      </div>
-                      <!-- reCAPTCHA input -->
-                      <input class="form-control input-sm" type="text" id="recaptcha_response_field" name="recaptcha_response_field" />
-                    </div> <!-- / #recaptcha_widget -->
-
-                    <script type="text/javascript"
+                    </div>
+                   </div> <!-- / #recaptcha_widget -->
+                   <script type="text/javascript"
                       src="http://www.google.com/recaptcha/api/challenge?k=YOUR_PUBLIC_KEY">
-                    </script>
-                    <noscript>
-                      <iframe src="http://www.google.com/recaptcha/api/noscript?k=YOUR_PUBLIC_KEY"
+                   </script>
+                   <noscript>
+                     <iframe src="http://www.google.com/recaptcha/api/noscript?k=YOUR_PUBLIC_KEY"
                           height="300" width="500" frameborder="0"></iframe><br>
-                      <textarea name="recaptcha_challenge_field" rows="3" cols="40">
-                      </textarea>
-                      <input type="hidden" name="recaptcha_response_field"
+                     <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+                     </textarea>
+                     <input type="hidden" name="recaptcha_response_field"
                           value="manual_challenge">
-                    </noscript>
-                    <!-- End reCAPTCHA -->
-                    <span class="help-block"></span>
-                  </div> <!-- / .form-group -->
-
+                   </noscript>
+                   <!-- End reCAPTCHA -->
+                  <span class="help-block"></span>
                 </div>
 
-                <div class="col-sm-6">
-                  <!-- Message -->
-                  <div class="form-group">
-                    <label for="message" class="sr-only">Mesajın</label>
-                    <textarea name="message" class="form-control" rows="11" id="message" placeholder="Message"></textarea>
-                    <span class="help-block"></span>
-                  </div>
-                </div>
-              </div> <!-- / .row -->
-
-              <div class="text-center">
-                <button type="submit" class="btn btn-lg btn-default">
+                <button type="submit" class="btn btn-lg btn-primary">
                   <span class="oi oi-arrow-right" title="Send it" aria-hidden="true"></span>
-                  <span>Gönder</span>
+                  <span>Send it</span>
                 </button>
-                <div class="clearfix"></div>
-              </div>
 
-            </form>
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </div> <!-- / .site-wrapper -->
+              </form>
 
-    <!-- Google Map -->
-    <div class="site-wrapper">
-      <div id="map-canvas" class="contact__map"></div>
-    </div> <!-- / .site-wrapper -->
+            </div>
+          </div> <!-- / .row -->
+        </div> <!-- / .container -->
+      </div> <!-- / .site-wrapper -->
 
-
-    <!-- FOOTER
-    ============================== -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6">
-            2015 &copy; Arıl Bozoluk. Tüm Hakları Saklıdır.
-          </div>
-          <div class="col-xs col-sm-6">
-            <div class="social__items">
-              <a href="#" class="social__item">
-                <i class="fa fa-twitter"></i>
-              </a>
-              <a href="#" class="social__item">
-                <i class="fa fa-facebook"></i>
-              </a>
-              <a href="#" class="social__item">
-                <i class="fa fa-google-plus"></i>
-              </a>
-            </div> <!-- / .social__links -->
-          </div>
-        </div>
-      </div>
-    </footer>
-
+    </div> <!-- / #fullpage -->
 
     <!-- JavaScript
     ================================================== -->
 
     <!-- JS Global -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
 
     <!-- JS Plugins -->
-    <script src="js/plugins/jquery.parallax-1.1.3.js"></script>
-    <script src="js/plugins/smoothscroll.js"></script>
-    <script src="js/plugins/jquery.waypoints.min.js"></script>
+    <script src="js/plugins/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/jquery.fullPage.min.js"></script>
+    <script src="js/plugins/jquery.backstretch.min.js"></script>
     <script src="js/plugins/imagesloaded.pkgd.min.js"></script>
     <script src="js/plugins/isotope.pkgd.min.js"></script>
     <script src="js/plugins/lightbox.min.js"></script>
     <script src="js/plugins/contact.js"></script>
-    <script src="js/plugins/google-maps.js"></script>
 
     <!-- JS Custom -->
-    <script src="js/custom_classic.js"></script>
+    <script src="js/custom_sliding.js"></script>
     <script src="js/custom.js"></script>
 
 

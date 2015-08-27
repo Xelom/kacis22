@@ -18,9 +18,9 @@ $(window).load(function() {
     $('#fullpage').fullpage({
 
         // Plugin setup
-        
+
         // Navigation
-        anchors: ['welcome', 'about', 'portfolio', 'pricing', 'team', 'features', 'contact'],
+        anchors: ['welcome', 'team', 'about', 'contact'],
         menu: '.fullpage__nav',
         slidesNavigation: 'true',
 

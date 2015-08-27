@@ -6931,7 +6931,7 @@ body.classic .welcome_classic {
   height: 100%;
   min-height: 100%;
   width: 100%;
-  background-image: url(../img/bg-pattern_alt.png), url(../img/screen-bg_11.jpg);
+  background-image: url(../img/bg-pattern_alt.png), url(../img/msc3.jpg);
   background-position: top left, center center;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -6964,7 +6964,7 @@ body.classic .portfolio-item__mask {
   width: auto;
   height: auto;
 }
-body.classic #features {
+body.classic #team {
   background-image: url(../img/bg-pattern.png), url(../img/screen-bg_5.jpg);
   background-position: top left, center center;
   background-size: auto, cover;
@@ -7376,10 +7376,10 @@ body::after {
   background-repeat: repeat, no-repeat;
 }
 .sliding-image .site-wrapper[data-anchor="welcome"] {
-  background-image: url(../img/bg-pattern.png), url(../img/screen-bg_1.jpg);
+  background-image: url(../img/bg-pattern.png), url(../img/msc3.jpg);
 }
 .sliding-image .site-wrapper[data-anchor="about"] {
-  background-image: url(../img/bg-pattern.png), url(../img/screen-bg_2.jpg);
+  background-image: url(../img/bg-pattern.png), url(../img/key.jpg);
 }
 .sliding-image .site-wrapper[data-anchor="portfolio"] {
   background-image: url(../img/bg-pattern.png), url(../img/screen-bg_3.jpg);
@@ -7388,7 +7388,7 @@ body::after {
   background-image: url(../img/bg-pattern.png), url(../img/screen-bg_4.jpg);
 }
 .sliding-image .site-wrapper[data-anchor="team"] {
-  background-image: url(../img/bg-pattern.png), url(../img/screen-bg_5.jpg);
+  background-image: url(../img/bg-pattern.png), url(../img/door.jpg);
 }
 .sliding-image .site-wrapper[data-anchor="features"] {
   background-image: url(../img/bg-pattern.png), url(../img/screen-bg_6.jpg);

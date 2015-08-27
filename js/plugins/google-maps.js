@@ -16,9 +16,9 @@ Last change:    30/04/2015
 /* Requires Google Maps API */
 
 function initialize() {
-  var myLatlng = new google.maps.LatLng(41.674965,26.583481); // Change your location
+  var myLatlng = new google.maps.LatLng(40.7833806,-74.0758533); // Change your location
   var mapOptions = {
-    zoom: 13, // Change zoom value
+    zoom: 5, // Change zoom value
     scrollwheel: false, // Change to "true" to enable users scale map on scroll
     center: myLatlng
   }
