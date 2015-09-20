@@ -105,15 +105,15 @@
         <div class="row">
             <div class="col-lg-4">
               <h2><i class="fa fa-3x fa-users"></i></h2>
-              <h3>ARKADAŞLARINLA YAŞAYACAĞIN EŞSİZ BİR DENEYİM</h3>
+              <h3><span class="text-primary">ARKADAŞLARINLA YAŞAYACAĞIN EŞSİZ BİR DENEYİM</span></h3>
             </div>
             <div class="col-lg-4">
               <h2><i class="fa fa-3x fa-puzzle-piece"></i></h2>
-              <h3>SIRLARLA DOLU BİR OTEL KAÇMANI SAĞLAYACAK İPUÇLARI</h3>
+              <h3><span class="text-primary">SIRLARLA DOLU BİR OTEL KAÇMANI SAĞLAYACAK İPUÇLARI</span></h3>
             </div>
             <div class="col-lg-4">
               <h2><i class="fa fa-3x fa-clock-o"></i></h2>
-                <h3>1 SAATLİK BENZERSİZ BİR MACERA</h3>
+                <h3><span class="text-primary">1 SAATLİK BENZERSİZ BİR MACERA</span></h3>
             </div>
         </div>
     </section>
@@ -163,7 +163,79 @@
 
         </div>
     </section>
+    <!-- Modal -->
+    <div class="modal fade" id="rezModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content"  style="background-color: #16a085;">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Rezervasyon Detayları</h4>
+          </div>
+          <form id="rezForm" class="form-horizontal">
+            <div class="modal-body">
+              <div class="form-group">
+                <div class="col-sm-8">
+                  GÜN:<h3 id="dateValue"></h3>
+                </div>
+                <div class="col-sm-4">
+                  SAAT:<h3 id="timeValue"></h3>
+                </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="text" class="form-control" id="inputFirstname" placeholder="Ad" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="text" class="form-control" id="inputLastname" placeholder="Soyad" required>
+              </div>
+            </div>
 
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Mail adresi hatalı" required>
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="tel" class="form-control" id="inputPhone" placeholder="Telefon" required>
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-4">
+                <label for="inputPersonCount" class="control-label">Kişi Sayısı Seçin: </label>
+              </div>
+              <div class="col-sm-8">
+                <select class="selectpicker" id="inputPersonCount" data-style="btn-danger" required>
+                  <option value="" disabled selected>Kişi Sayısı</option>
+                  <option value="2">2 KİŞİ(100TL)</option>
+                  <option value="3">3 KİŞİ(110TL)</option>
+                  <option value="4">4 KİŞİ(120TL)</option>
+                  <option value="5">5 KİŞİ(130TL)</option>
+                  <option value="6">6 KİŞİ(150TL)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="checkbox" data-error="Şartları kabul etmelisiniz" required> <a href="http://kacis22.com/termsofuse.htm" target="_blank" >Şartları</a> kabul ediyorum
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="closeButton" type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+            <!-- <button type="button" type="submit" onclick="submitRez();" class="btn btn-warning">Gönder</button> -->
+              <button id="sendRezButton" type="submit" onclick="submitRez();return false;" class="btn btn-warning">Gönder</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- Reservation Section -->
     <section id="reservation" class="container content-section text-center">
       <h2>
@@ -174,6 +246,7 @@
       </div>
         <div class="row">
             <div class="col-lg-4 col-lg-offset-1">
+              <div id="dateContainer"></div>
               <a id="datePicker" href="#" class="btn btn-default btn-lg">
                GÜN SEÇİN
              </a>
@@ -182,6 +255,7 @@
            </p>
              </div>
              <div class="col-lg-4 col-lg-offset-2">
+               <div id="timeContainer"></div>
                <a id="timePicker" href="#" disabled="true" class="btn btn-default btn-lg">
                  SAAT SEÇİN
                </a>
@@ -200,16 +274,19 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2><span class="text-primary">İLETİŞİM</span></h2>
-
+                <p><span class="fa fa-envelope"></span>  <a href="mailto:info@kacis22.com" target="_blank">  info@kacis22.com</a></p>
+                <p><span class="fa fa-phone"></span> <a href="tel:05462231703">0546 22 797 22</a></p>
+                <p><span class="text-primary">Açık Adres:</span> 1. Murat Mah. Zübeyde Hanım Cd. No:14 Kandır Apt. D:4 Merkez Edirne</p>
+                <p><span class="text-primary">Açık Tarifi:</span> Palmiye Cafe'nin yanındaki apartmanın en üst katı</p>
                 <ul class="list-inline banner-social-buttons">
+                  <li>
+                      <a href="https://www.facebook.com/kacis22" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                  </li>
+                  <li>
+                      <a href="http://instagram.com/kacis22" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
+                  </li>
                     <li>
-                        <a href="p" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                        <a href="" class="btn btn-default btn-lg disabled"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                     </li>
                 </ul>
             </div>
@@ -218,64 +295,7 @@
 
     <!-- Map Section -->
     <div id="map"></div>
-    <!-- Modal -->
-    <div class="modal fade" id="rezModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content"  style="background-color: #16a085;">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Rezervasyon Detayları</h4>
-          </div>
-          <form class="form-horizontal">
-            <div class="modal-body">
-              <div class="form-group">
-                <div class="col-sm-8">
-                  GÜN:<h3 id="dateValue"></h3>
-                </div>
-                <div class="col-sm-4">
-                  SAAT:<h3 id="timeValue"></h3>
-                </div>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-6">
-                <input type="text" class="form-control" id="inputFirstname" placeholder="İsim">
-              </div>
-              <div class="col-sm-6">
-                <input type="text" class="form-control" id="inputLastname" placeholder="Soyisim">
-              </div>
-            </div>
-              <div class="form-group">
-                <div class="col-sm-6">
-                  <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                </div>
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" id="inputPhone" placeholder="Telefon">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-12">
-                  <select class="selectpicker" data-style="btn-danger">
-                    <option value="" disabled selected>Kişi Sayısı</option>
-                    <option>2 KİŞİ(100TL)</option>
-                    <option>3 KİŞİ(110TL)</option>
-                    <option>4 KİŞİ(120TL)</option>
-                    <option>5 KİŞİ(130TL)</option>
-                    <option>6 KİŞİ(150TL)</option>
-                  </select>
-                </div>
-              </div>
-              <label>
-                <input type="checkbox"> Şartları kabul ediyorum
-              </label>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
-              <button type="button" type="submit" class="btn btn-warning">Gönder</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+
     <!-- Footer -->
     <footer>
         <div class="container text-center">
@@ -290,6 +310,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-select.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+    <script src="js/validator.js"></script>
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/picker.js"></script>
