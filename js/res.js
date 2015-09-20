@@ -33,6 +33,7 @@ function getResponsiveStatus(){
     var today = new Date();
     var timePickerConfig = {
       formatSubmit: 'HH:i',
+      close: 'Kapat',
       closeOnSelect: true,
       clear: '',
       formatLabel: function(time) {
@@ -42,6 +43,9 @@ function getResponsiveStatus(){
       min: [10,00],
       max: [23,30],
       disable:[],
+      onClose: function() {
+        window.location.href = '#reservation';
+      },
       onRender: function() {
         var resHour = this.get('select','HH:i');
         if(resHour) {
@@ -59,6 +63,9 @@ function getResponsiveStatus(){
       min: today,
       max: 90,
       hiddenName: true,
+      onClose: function() {
+        window.location.href = '#reservation';
+      },
       onOpen: function() {
         $("#timePicker").attr("disabled",true);
         $("#timeVal").html('');
